@@ -30,6 +30,9 @@ fn down_box(x: i32, y: i32, w: i32, h: i32, c: Color) {
 fn border_box(x: i32, y: i32, w: i32, h: i32, c: Color) {
     rectf(x, y, w, h, c);
     rect(x, y, w, h, Color::color_average(Color::White, c, 0.2));
+    set_draw_color(Color::Black);
+    draw_rect(x, y, w, h);
+
 }
 
 pub(crate) fn use_clean_scheme() {
